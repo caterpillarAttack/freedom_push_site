@@ -6,9 +6,18 @@ body {
   margin: 0;     /* Remove default margins */
   flex-direction: column; /* Ensures h1 and img are stacked vertically */
   text-align: center;     /* Center-align text */
+
+  background-image: url('assets/flag_background.jpg'); /* Path to your background image */
+  background-repeat: no-repeat; /* Avoid repeating the background image */
+  background-size: cover; /* Make background cover the entire viewport */
+  background-position: center; /* Center the background image */
 }
 
 img {
-  max-width: 100%; /* Optional, scales the image down if too large */
-  height: auto;    /* Maintains aspect ratio */
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  color: black; /* Title text will now be red */
 }
