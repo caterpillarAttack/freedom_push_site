@@ -1,19 +1,46 @@
 <html lang="en">
-  <head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="style.css" rel="stylesheet" />
+  <title>THE FREEDOM PUSH!</title>
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="style.css" rel="stylesheet" />
-    <title>THE FREEDOM PUSH!</title>
+  <script>
+    function playSound() {
+      const audio = new Audio("assets/trump_sound_with_music.mp3"); // Path to your audio file
+      audio.volume = 1.0; // Set volume to maximum
+      audio.play().catch((err) => {
+        console.log("Audio playback blocked:", err);
+      });
 
-  </head>
+      // Remove the button after it is clicked to prevent interference
+      const hiddenButton = document.getElementById("hiddenButton");
+      if (hiddenButton) {
+        hiddenButton.style.display = "none";
+      }
+    }
+  </script>
+  <style>
+    /* Full-page hidden button styles */
+    #hiddenButton {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent; /* Invisible button */
+      border: none; /* No border */
+      cursor: pointer; /* Show pointer cursor to let browser recognize it as interactive */
+      z-index: 1000; /* Ensure it sits on top of all other content */
+    }
+  </style>
+</head>
+<body>
+<!-- Full-page hidden button -->
+<button id="hiddenButton" onclick="playSound()" aria-hidden="true"></button>
 
-  <head>
-  </head>
-  <body>
-  <h1>PUSH PUSH PUSH FOR FREEDOM!</h1>
-  <img src="assets/freedom_push.png" alt="Freedom Push" />
-
-  </body>
+<h1>PUSH PUSH PUSH FOR FREEDOM!</h1>
+<img src="assets/freedom_push.png" alt="Freedom Push" />
+</body>
 </html>
