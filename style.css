@@ -7,17 +7,39 @@ body {
   flex-direction: column; /* Ensures h1 and img are stacked vertically */
   text-align: center;     /* Center-align text */
 
-  background-image: url('assets/flag_background.jpg'); /* Path to your background image */
+  background-image: url('assets/flag_background_updated.png'); /* Path to your background image */
   background-repeat: no-repeat; /* Avoid repeating the background image */
   background-size: cover; /* Make background cover the entire viewport */
   background-position: center; /* Center the background image */
 }
 
 img {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
 }
 
 h1 {
-  color: black; /* Title text will now be red */
+  font-size: 3rem; /* Makes the text larger; adjust the value as needed */
+
+  font-weight: bold; /* Makes the font bold */
+  animation: cycleColors 3s infinite; /* Runs the animation continuously */
+  text-shadow:
+          1px 1px 2px #ccc,   /* Light shadow bottom-right for emboss effect */
+          -1px -1px 2px #000;  /* Dark shadow top-left for emboss effect */
+}
+
+/* Define the keyframes for the color cycling */
+@keyframes cycleColors {
+  0% {
+    color: red; /* Start with red */
+  }
+  33% {
+    color: white; /* Transition to white */
+  }
+  66% {
+    color: blue; /* Then to blue */
+  }
+  100% {
+    color: red; /* Back to red to create a loop */
+  }
 }
