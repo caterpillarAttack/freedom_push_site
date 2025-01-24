@@ -9,7 +9,7 @@ body {
 
   background-image: url('assets/flag_background_updated.png'); /* Path to your background image */
   background-repeat: no-repeat; /* Avoid repeating the background image */
-  background-size: cover; /* Make background cover the entire viewport */
+  background-size: cover; /* Make the background cover the entire viewport */
   background-position: center; /* Center the background image */
 }
 
@@ -20,7 +20,6 @@ img {
 
 h1 {
   font-size: 3rem; /* Makes the text larger; adjust the value as needed */
-
   font-weight: bold; /* Makes the font bold */
   animation: cycleColors 3s infinite; /* Runs the animation continuously */
   text-shadow:
@@ -42,4 +41,76 @@ h1 {
   100% {
     color: red; /* Back to red to create a loop */
   }
+}
+
+/* Social Media Button Styles */
+.fa, .fab {
+  padding: 20px;
+  font-size: 90px; /* Adjusted size to 3x normal */
+  width: 90px;     /* Increased width for consistency with the font size */
+  height: 90px;    /* Ensures buttons remain square */
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 5%; /* Circular icons */
+  display: inline-block; /* Ensure proper spacing for inline elements */
+  transition: transform 0.2s, opacity 0.3s;
+}
+
+.fa:hover {
+  opacity: 0.7; /* Adds a hover effect to decrease opacity */
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+/* Platform-Specific Background Colors */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+/* Additional Button Styles (Optional) */
+.fa-weibo {
+  background: #d71a1a;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+
+.fa-odnoklassniki {
+  background: #ff5700;
+  color: white;
+}
+
+.fa-vk {
+  background: #55ACEE;
+  color: white;
 }
